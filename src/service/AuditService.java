@@ -40,7 +40,7 @@ public final class AuditService {
         try(FileWriter fileWriter = new FileWriter(this.file, true);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
 
-            String currDateAndTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss"));
+            String currDateAndTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.append(currDateAndTime).append(",");
             stringBuilder.append(log.get("object")).append(",");
